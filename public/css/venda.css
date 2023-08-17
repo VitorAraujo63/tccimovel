@@ -15,7 +15,13 @@
     align-items: center; 
 }
 
+h1{
+    color: white;
+}
 
+h4{
+    color: white;
+}
 
 .venda #reg:hover{
     opacity: 50%;

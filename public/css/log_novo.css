@@ -1,16 +1,16 @@
-.log_novo{
+.log_novo {
     text-align: center;
     position: absolute;
     background-color: #181920;
     border-radius: 10px;
-    max-width: 360px;
+    max-width: 460px;
     width: 100%;
-    height: 550px;
+    height: 350px;
     box-shadow: 0px 0px 50px 2px #4d576e;
 }
 
 .alt-log input[type='submit'] {
-    margin-left: 120px;
+    margin-left: 170px;
     margin-top: 30px;
 }
 
@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-h4{
+h4 {
     color: white;
 }
 
@@ -31,7 +31,7 @@ h4{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .alterar button {
@@ -43,24 +43,69 @@ h4{
 .alterar button.delete {
     height: 50px;
     width: 70px;
-    
+   
+
 }
 
 button:hover {
     opacity: 50%;
 }
 
-.log_novo #alt:hover{
+.log_novo #alt:hover {
     opacity: 50%;
 }
 
 
+.box-imovel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding: 30px;
+    color: white;
+    background: rgb(0 0 0 / 20%);
+    box-shadow: 0 0 12px 2px rgba(0 0 0 / 90%);
+    border: 1px solid rgba(255, 255, 255, 0.164);
+    border-radius: 15px;
+}
 
+.box-imovel img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
 
+#section-imoveis {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
 
+.box-imovel {
+    flex-basis: 300px;
+}
 
-    /*<tr>
-        <td>{{ $imovel->quarto }}</td>
-        <td>{{ $imovel->bairro }}</td>
-        <td>{{ $imovel->preco }}</td>
-     </tr> */
+hr {
+    width: 100%;
+}
+
+#page-conta {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 30px;
+}
+
+#page-conta > * {
+    text-align: center;
+}
+
+.deletar{
+    color: rgba(218, 58, 58, 0.781);
+    background-color: #01020ca9;
+    border: 1px solid rgba(218, 58, 58, 0.781);
+    
+}

@@ -1,3 +1,7 @@
+h1 {
+    color: #FFF;
+}
+
 .l-imagens {
     display: flex;
     align-items: center;
@@ -9,8 +13,8 @@
 }
 
 .imagens img {
-    width: 400;
-    height: 350;
+    width: 340px;
+    height: 340px;
     object-fit: contain;
 }
 
@@ -28,6 +32,9 @@
 }
 
 .imagens {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -44,5 +51,19 @@ button [type='submit']{
 
 .voltar{
     color: #5558fe;
+    
+}
+
+.box-img-imovel {
+    transition: 0.5s;
+    padding: 20px;
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.089);
+}
+
+.box-img-imovel:hover {
+    border: 1px solid white;
     
 }
