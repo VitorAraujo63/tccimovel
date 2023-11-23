@@ -14,6 +14,7 @@
                 <span>{{ $imovel->cidade}} - {{ $imovel->estado}}</span> <br>
                 <span class="bairro">{{ $imovel->bairro}}</span> <br>
                 <span>{{ $imovel->rua}}, {{ $imovel->numero}}</span>
+                
             </p>
             
             <p>
@@ -23,6 +24,9 @@
             </p>
             <p>
                 <span>{{ $imovel->descricao}}</span>
+            </p>
+            <p>
+                <span><a href="/imagens/{{ $imovel->id}}">Adicionar Foto</a></span>
             </p>
         </div>
         <div class="flex-col info-owner gap-30 content-center">

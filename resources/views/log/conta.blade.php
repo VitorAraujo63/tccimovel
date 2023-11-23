@@ -3,6 +3,7 @@
 <x-layout>
 
     <link rel="stylesheet" href="/css/log_novo.css">
+    <script src="/js/confirmar.js"></script>
 
     <div id="page-conta">
         <div>
@@ -13,6 +14,7 @@
                 <input type="text" name="tele_novo" placeholder="Telefone" value="{{ $logado->telefone }}">
                 <input type="text" name="senha_novo" placeholder="Senha" value="{{ $logado->senha }}">
                 <button type="submit" id="alt">Alterar</button>
+                <button><a class="active" href="/fazer-logout">Sair</a></button>
                 @csrf
             </form>
         </div>
@@ -49,5 +51,7 @@
             </section>
         </div>
     </div>
+
+
 
 </x-layout>

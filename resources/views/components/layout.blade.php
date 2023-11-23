@@ -14,6 +14,7 @@ $logado = Session::get("info_usuario");
     <title>MBR Imoveis</title>
     <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/layout.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
@@ -22,24 +23,18 @@ $logado = Session::get("info_usuario");
             <ul>
                 <li><a href="/"><img src="/img/home.svg"></a></li>
 
-                <li><a href="venda"><img src="/img/dollar_sign.svg" alt=""></a></li>
-                <li><a href="conta"><img src="/img/account.svg"></a></li>
-                @if (!$logado)
-                <li style="float:right" id="log"><a class="active" href="/login">Login</a></li>
-                @else
-                <li style="float:right" id="log"><a class="active" href="/fazer-logout">Sair</a></li>
+                @if ($logado)
+                <li><a href="/venda"><img src="/img/dollar_sign.svg" alt=""></a></li>
                 @endif
 
-                <!--  @if(Auth::check())
-                <li style="float:right" id="log"><a class="active" href="login">Login</a></li>
-                @else
-                <form action="/fazer-logout" method="post">
-                    @csrf
-                    <li style="float:right" id="log"><button><a class="active"> Sair</a></button></li>
-                </form>
-                @endif -->
+                @if ($logado)
+                <li style="float:right" id="log"><a href="/conta"><img src="/img/account.svg"></a></li>
+                @endif
 
-                <li style="float:right"><button type="button" onclick="mostrar()" class="btn-search"><img src="/img/search.svg"></button></li>
+                @if (!$logado)
+                <li style="float:right" id="log"><a class="active" href="/login">Login</a></li>
+                @endif
+                
             </ul>
         </div>
     </header>
@@ -54,28 +49,12 @@ $logado = Session::get("info_usuario");
         {{ $slot }}
     </div>
 
-    <div class="overlay-search hidden">
-        <form action="" class="form-search">
-            <button type="button" onclick="esconder()" class="btn-hidden"><img src="img/cancel.svg"></button>
-            <input type="text" name="search" class="pesquisa">
-            <button type="submit">Pesquisar</button>
-        </form>
-    </div>
+    
     <footer>
         Copyright 2023 © - MBR IMOVEIS
     </footer>
 
-    <script>
-        function mostrar() {
-            let overlaySearch = document.querySelector(".overlay-search");
-            overlaySearch.classList.remove("hidden");
-        }
-
-        function esconder() {
-            let overlaySearch = document.querySelector(".overlay-search");
-            overlaySearch.classList.add("hidden")
-        }
-    </script>
+    
 </body>
 
 </html>

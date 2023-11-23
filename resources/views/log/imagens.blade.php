@@ -33,7 +33,7 @@
         </div>
 
         <br><br><br>
-        <a href="/conta" class='voltar'>Voltar</a>
+        <a href="/conta" class='voltar'>Concluir</a>
     </div>
 
 </x-layout>

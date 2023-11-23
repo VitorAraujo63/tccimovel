@@ -53,6 +53,8 @@ Route::get('/pesquisa', [ImovelController::class, 'pesquisaView']);
 
 Route::post('/pesquisar', [ImovelController::class, 'pesquisa']);
 
+
+
 Route::get('/imovel/{id}', [ImovelController::class, 'imovelView']);
 Route::post('/caminho-imovel', [ImovelController::class, 'verimovel']);
 

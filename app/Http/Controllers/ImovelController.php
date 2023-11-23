@@ -15,12 +15,14 @@ use Illuminate\Support\Facades\Storage;
 
 class ImovelController extends Controller
 {
+    
+
     public function vendaView()
     {
         $logado = Session::get('info_usuario');
 
         if (!$logado) {
-            return redirect('/login')->with('mensagem_erro', "A pagina só é permitida para usuarios Logados");
+            return redirect('/login');
         }
 
         $id_logado = $logado->id;
@@ -292,4 +294,10 @@ class ImovelController extends Controller
 
         return redirect('/imovel/' . $id_caminho);
     }
+
+    
+
 }
+
+
+

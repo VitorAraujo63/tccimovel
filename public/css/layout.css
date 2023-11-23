@@ -300,3 +300,12 @@ form button {
 h1 {
     color: white;
 }
+
+
+button a {
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    cursor:default;
+}
